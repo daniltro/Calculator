@@ -39,7 +39,7 @@ body {
   );;
   border-radius: 35px;
   margin-block-end: 25px;
-  inline-size: 100%;
+  max-inline-size: 400px;
   block-size: 103px;
   overflow-x: auto;
 }
