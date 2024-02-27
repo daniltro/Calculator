@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(71, 27, 162, 1) 49%,
+    rgba(133, 20, 152, 0.9282535601265822) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100dvh;
+}
+
+.calculator {
+  max-inline-size: 500px;
+  background-color: black;
+  padding: 25px;
+  border-radius: 30px;
+  box-shadow: 14px 23px 40px 12px rgba(0,0,0,0.51);
+}
+
+.display {
+  font-size: 75px;
+  color: rgb(188, 181, 181);
+  text-align: right;
+  padding: 0 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(71, 27, 162, 1) 49%,
+    rgba(133, 20, 152, 0.9282535601265822) 100%
+  );;
+  border-radius: 35px;
+  margin-block-end: 25px;
+  inline-size: 100%;
+  block-size: 103px;
+  overflow-x: auto;
+}
+.display::-webkit-scrollbar {
+  background-color: transparent;
+  display: inline;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+.button {
+  border: none;
+  inline-size: 90px;
+  font-size: 30px;
+  padding: 27px 0;
+  border-radius: 50%;
+  color: white;
+  text-transform: uppercase;
+}
+.additional-button {
+  background-color: grey;
+  color: black;
+}
+.accent-button {
+  background-color: rgb(179, 121, 14);
+  color: #ffffff;
+}
+.number-button {
+  background-color: #343131;
+}
+.zero-button {
+  border-radius: 50px;
+  inline-size: 50%;
+}
+
+@media (width < 470px) {
+  .zero-button {
+   inline-size: 45%;
+  }
+}
+
+@media (width < 455px) {
+ 
+  .button {
+    inline-size: 70px;
+    padding: 20px 0;
+  }
+  .zero-button {
+    inline-size: 40%;
+   }
+}
