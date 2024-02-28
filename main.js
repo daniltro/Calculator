@@ -81,12 +81,26 @@ buttons.addEventListener("click", function (event) {
     return;
   }
 
+  if (key === "%") {
+    a = a / 100;
+    finish = true;
+    display.textContent = a;
+    return;
+  }
+
+  if (key === "+/-") {
+    a = a * -1;
+    finish = true;
+    display.textContent = a;
+    return;
+  }
+
   if (actions.includes(key)) {
     sign = key;
     display.textContent = sign;
     return;
   }
-
+  
   if (key === "=") {
     if (b === "") {
       b = a;
@@ -110,12 +124,6 @@ buttons.addEventListener("click", function (event) {
           return;
         }
         a = a / b;
-        break;
-      case "%":
-        a = a / 100;
-        break;
-      case "+/-":
-        a = a * -1;
         break;
     }
     finish = true;

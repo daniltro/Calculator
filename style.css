@@ -5,13 +5,8 @@
 }
 
 body {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(71, 27, 162, 1) 49%,
-    rgba(133, 20, 152, 0.9282535601265822) 100%
-  );
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,21 +23,18 @@ body {
 
 .display {
   font-size: 75px;
-  color: rgb(188, 181, 181);
+  color: rgb(63, 58, 58);
   text-align: right;
   padding: 0 20px;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(71, 27, 162, 1) 49%,
-    rgba(133, 20, 152, 0.9282535601265822) 100%
-  );;
-  border-radius: 35px;
+  background: rgb(221,160,187);
+  background: linear-gradient(90deg, rgba(221,160,187,1) 0%, rgba(148,187,233,1) 100%);
+  border-radius: 20px;
   margin-block-end: 25px;
-  max-inline-size: 400px;
+  inline-size: 100%;
   block-size: 103px;
   overflow-x: auto;
 }
+
 .display::-webkit-scrollbar {
   background-color: transparent;
   display: inline;
@@ -64,34 +56,38 @@ body {
   text-transform: uppercase;
 }
 .additional-button {
-  background-color: grey;
-  color: black;
+  background: rgb(187,108,81);
+  background: linear-gradient(150deg, rgba(187,108,81,0.9220063025210083) 0%, rgba(205,169,110,0.9192051820728291) 100%);
 }
 .accent-button {
-  background-color: rgb(179, 121, 14);
-  color: #ffffff;
+  background: rgb(181,98,85);
+  background: linear-gradient(90deg, rgba(181,98,85,1) 0%, rgba(148,187,233,1) 100%);
 }
 .number-button {
-  background-color: #343131;
+  color: rgb(63, 58, 58);
+  background: rgb(221,160,187);
+background: linear-gradient(90deg, rgba(221,160,187,1) 0%, rgba(148,187,233,1) 100%);
 }
 .zero-button {
   border-radius: 50px;
   inline-size: 50%;
 }
 
-@media (width < 470px) {
-  .zero-button {
-   inline-size: 45%;
-  }
-}
-
 @media (width < 455px) {
- 
+  .calculator {
+    max-inline-size: 100%;
+  }
   .button {
     inline-size: 70px;
     padding: 20px 0;
   }
   .zero-button {
-    inline-size: 40%;
+    inline-size: 50%;
    }
+}
+
+@media (width < 390px) {
+  .zero-button {
+   inline-size: 45%;
+  }
 }
