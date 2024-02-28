@@ -13,8 +13,8 @@ body {
   block-size: 100dvh;
 }
 
+
 .calculator {
-  max-inline-size: 500px;
   background-color: black;
   padding: 25px;
   border-radius: 30px;
@@ -42,16 +42,29 @@ body {
 
 .buttons {
   display: flex;
-  flex-wrap: wrap;
+  gap: 10px;
   justify-content: space-between;
-  gap: 15px;
 }
+
+.number-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.accent-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+}
+
 .button {
   border: none;
   inline-size: 90px;
+  block-size: 90px;
   font-size: 30px;
-  padding: 27px 0;
-  border-radius: 50%;
+  border-radius: 50px;
   color: white;
   text-transform: uppercase;
 }
@@ -70,24 +83,22 @@ background: linear-gradient(90deg, rgba(221,160,187,1) 0%, rgba(148,187,233,1) 1
 }
 .zero-button {
   border-radius: 50px;
-  inline-size: 50%;
+  grid-column: span 2;
+  inline-size: 100%;
 }
 
-@media (width < 455px) {
-  .calculator {
-    max-inline-size: 100%;
-  }
+
+@media (width < 440px) {
+  
   .button {
-    inline-size: 70px;
-    padding: 20px 0;
+    inline-size: 60px;
+    block-size: 60px;
+    font-size: 20px;
   }
+
   .zero-button {
-    inline-size: 50%;
-   }
+    inline-size: 100%;
+  }
+
 }
 
-@media (width < 390px) {
-  .zero-button {
-   inline-size: 45%;
-  }
-}
