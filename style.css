@@ -68,19 +68,23 @@ body {
   color: white;
   text-transform: uppercase;
 }
+
 .additional-button {
   background: rgb(187,108,81);
   background: linear-gradient(150deg, rgba(187,108,81,0.9220063025210083) 0%, rgba(205,169,110,0.9192051820728291) 100%);
 }
+
 .accent-button {
   background: rgb(181,98,85);
   background: linear-gradient(90deg, rgba(181,98,85,1) 0%, rgba(148,187,233,1) 100%);
 }
+
 .number-button {
   color: rgb(63, 58, 58);
   background: rgb(221,160,187);
 background: linear-gradient(90deg, rgba(221,160,187,1) 0%, rgba(148,187,233,1) 100%);
 }
+
 .zero-button {
   border-radius: 50px;
   grid-column: span 2;
